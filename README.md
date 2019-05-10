@@ -28,6 +28,7 @@
       <li>lossy compress</li>
     </ul>
     </li>
+    <li><code>@babel for es6 code</code></li>
     <li><code>uglify</code></li>
     <li><code>gulp-line-ending-corrector</code></li>
     <li><code>clean</code></li>
