@@ -28,13 +28,20 @@ const imgDist = "dist/img/";
 const imgWatch = "dist/img/**/*";
 
 //SASS Path
-const sassSrc = "src/scss/style.scss";
+const sassSrc = [
+  "node_modules/owl.carousel/dist/assets/owl.carousel.css",
+  "src/scss/style.scss"
+];
 const sassDist = "dist/css/";
 const sassSrcWatch = "src/scss/**/*";
 const sassWatch = "dist/css/**/*";
 
 //JS Path
-const jsSrc = "src/js/**/*.js";
+const jsSrc = [
+  "node_modules/jquery/dist/jquery.js",
+  "node_modules/owl.carousel/dist/owl.carousel.js",
+  "src/js/**/*.js"
+];
 const jsDist = "dist/js/";
 const jsWatch = "dist/js/**/*";
 //HTML
@@ -74,6 +81,7 @@ function style() {
       }).on("error", sass.logError)
     )
     .pipe(autoprefixer())
+    .pipe(concat("style.css"))
     .pipe(lineEnd())
     .pipe(dest(sassDist, { sourcemaps: true }))
     .pipe(browserSync.stream());

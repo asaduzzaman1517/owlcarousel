@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+.slider {
+  &__item {
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin: 0 1rem;
+    &--one {
+      background: rgb(50, 227, 240);
+    }
+    &--two {
+      background: rgb(240, 151, 50);
+    }
+    &--three {
+      background: rgb(120, 240, 50);
+    }
+    &--four {
+      background: rgb(50, 240, 151);
+    }
+  }
+  &--five {
+    background: rgb(69, 50, 240);
+  }
+}
